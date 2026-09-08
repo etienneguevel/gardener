@@ -1,13 +1,3 @@
-"""
-Sensor Dashboard - local web interface for humidity & luminosity captors.
-
-Run with:
-    python app.py
-
-Then open http://127.0.0.1:5000 in your browser (on the same computer),
-or http://<this-computer-ip>:5000 from another device on your network.
-"""
-
 import time
 from collections import deque
 from datetime import datetime
@@ -68,4 +58,4 @@ if __name__ == "__main__":
     t.start()
 
     # host="0.0.0.0" makes it reachable from other devices on your network too
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host="0.0.0.0", port=8080, debug=False)
