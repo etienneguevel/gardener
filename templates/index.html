@@ -243,8 +243,10 @@ async function refreshCurrent() {
     if (data.humidity !== null) {
       document.getElementById('humidity-value').textContent = data.humidity;
       document.getElementById('luminosity-value').textContent = data.luminosity;
+      document.getElementById('temperature-value').textContent = data.temperature;
       document.getElementById('humidity-updated').textContent = 'updated ' + data.time;
       document.getElementById('luminosity-updated').textContent = 'updated ' + data.time;
+      document.getElementById('temperature-updated').textContent = 'updated ' + data.time;
       document.getElementById('status-text').textContent = 'live';
     }
   } catch (e) {
