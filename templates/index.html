@@ -241,6 +241,12 @@ const chart = new Chart(ctx, {
         ticks: { color: '#e8a94a' },
         grid: { drawOnChartArea: false },
         title: { display: true, text: 'lux', color: '#e8a94a' }
+      },
+      y2: {
+        position: 'right',
+        ticks: { color: '#F54927' },
+        grid: { drawOnChartArea: false },
+        title: { display: true, text: 'temp', color: '#F54927' }
       }
     },
     plugins: {
@@ -274,6 +280,7 @@ async function refreshHistory() {
     chart.data.labels = data.map(d => d.time);
     chart.data.datasets[0].data = data.map(d => d.humidity);
     chart.data.datasets[1].data = data.map(d => d.luminosity);
+    chart.data.datasets[2].data = data.map(d => d.temperature);
     chart.update();
   } catch (e) {
     // silent — will retry next tick
