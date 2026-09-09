@@ -16,6 +16,8 @@
     --humidity-glow: rgba(79, 176, 198, 0.18);
     --luminosity: #e8a94a;
     --luminosity-glow: rgba(232, 169, 74, 0.18);
+    --temperature: #F54927;
+    --temperature-glow: rgba(245, 73, 39, 0.18);
     --mono: "SF Mono", "Cascadia Code", Consolas, monospace;
   }
 
@@ -207,6 +209,17 @@ const chart = new Chart(ctx, {
         tension: 0.3,
         pointRadius: 0,
         yAxisID: 'y1',
+        fill: true,
+      },
+      {
+        label: 'Temperature (C)',
+        data: [],
+        borderColor: '#e8a94a',
+        backgroundColor: 'rgba(232,169,74,0.08)',
+        borderWidth: 2,
+        tension: 0.3,
+        pointRadius: 0,
+        yAxisID: 'y2',
         fill: true,
       }
     ]
