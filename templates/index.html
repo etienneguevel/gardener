@@ -117,9 +117,10 @@
 
   .card.humidity .value { color: var(--humidity); }
   .card.luminosity .value { color: var(--luminosity); }
+  .card.temperature .value { color: var(--temperature); }
 
   .card .unit {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--ink-dim);
   }
@@ -165,6 +166,11 @@
       <div class="label">Luminosity</div>
       <div class="value"><span id="luminosity-value">—</span><span class="unit">lux</span></div>
       <div class="updated" id="luminosity-updated"></div>
+    </div>
+    <div class="card temperature">
+      <div class="label">Temperature</div>
+      <div class="value"><span id="temperature-value">—</span><span class="unit"> Celsius</span></div>
+      <div class="updated" id="temperature-updated"></div>
     </div>
   </div>
 

@@ -24,6 +24,7 @@ def poll_sensors_loop(interval_seconds: float = 2.0):
                 "time": datetime.now().strftime("%H:%M:%S"),
                 "humidity": humidity,
                 "luminosity": luminosity,
+                "temperature": temperature,
             }
             with history_lock:
                 history.append(reading)

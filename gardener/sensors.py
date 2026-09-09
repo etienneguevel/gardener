@@ -9,5 +9,4 @@ def read_captors() -> tuple[float, float, float]:
     bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
     bh1750 = adafruit_bh1750.BH1750(i2c)
 
-    return bme280.temperature, bme280.humidity, bh1750.lux
-
+    return round(bme280.temperature, 2), round(bme280.humidity, 2), round(bh1750.lux, 2)
